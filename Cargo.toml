@@ -1,0 +1,24 @@
+[package]
+name = "traffic-orchestrator"
+version = "2.0.1"
+edition = "2021"
+authors = ["Traffic Orchestrator <support@trafficorchestrator.com>"]
+description = "Official Rust client for Traffic Orchestrator license validation, management, and analytics"
+license = "MIT"
+repository = "https://github.com/Traffic-Orchestrator/TO"
+homepage = "https://trafficorchestrator.com/docs/sdks/rust"
+keywords = ["licensing", "license-validation", "api-client", "saas"]
+categories = ["api-bindings", "authentication"]
+
+[dependencies]
+reqwest = { version = "0.12", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+base64 = "0.22"
+ed25519-dalek = "2.1"
+thiserror = "1.0"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full", "test-util"] }
+mockito = "1.4"
